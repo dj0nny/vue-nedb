@@ -10,6 +10,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: () => import('./views/Add.vue')
     }
   ]
 })

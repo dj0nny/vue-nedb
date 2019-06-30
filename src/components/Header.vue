@@ -39,6 +39,7 @@ export default {
   background: #0b123b;
   color: #fff;
   padding: 15px;
+  margin-bottom: 50px;
 
   ul#menu {
     padding: 0;

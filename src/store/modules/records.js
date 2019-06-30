@@ -3,18 +3,31 @@ var Datastore = require('nedb')
 
 export default {
   state: {
-    records: [
-      {
-      id: 1,
-      nome: 'test'
-      },
-    ]
+    records: [{}]
   },
 
   getters: {},
 
-  mutations: {},
+  mutations: {
+    add_record(state, payload) {
+      state.records.push(payload)
+    },
+    set_records_state(state, payload) {
+      state.records = payload
+    }
+  },
 
-  actions: {}
+  actions: {
+    add({ commit }, record) {
+      db.insert(record, function(err, record) {
+        commit('add_record', record)
+      })
+    },
+    fecthRecords({ commit }) {
+      db.find({}, function (err, records) {
+        commit('set_records_state', records)
+      });
+    }
+  }
 
 }

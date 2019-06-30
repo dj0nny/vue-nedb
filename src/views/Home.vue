@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 import RecordsList from '../components/RecordsList'
 
@@ -18,6 +18,14 @@ export default {
     ...mapState([
       'records'
     ])
+  },
+  methods: {
+    ...mapActions([
+      'fecthRecords'
+    ])
+  },
+  mounted() {
+    this.fecthRecords()
   }
 }
 </script>

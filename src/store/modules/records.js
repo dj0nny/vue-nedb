@@ -3,7 +3,12 @@ var Datastore = require('nedb')
 
 export default {
   state: {
-    records: [{}]
+    records: [
+      {
+      id: 1,
+      nome: 'test'
+      },
+    ]
   },
 
   getters: {},
@@ -11,4 +16,5 @@ export default {
   mutations: {},
 
   actions: {}
+
 }

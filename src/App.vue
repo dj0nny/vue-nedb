@@ -27,4 +27,17 @@ export default {
 body {
   font-family: 'Montserrat';
 }
+
+.button {
+    background: #3a506b !important;
+    color: #fff !important;
+    border: 1px solid #3a506b !important;
+    transition: .3s all !important;
+
+    &:hover {
+      background: #fff !important;
+      color: #3a506b !important;
+    }
+}
+
 </style>

@@ -17,10 +17,10 @@
               <b-form-input v-model="record.year" placeholder="Release year" type="number" required></b-form-input>
             </b-col>
             <b-col md="12">
-              <b-form-input v-model="record.cover" placeholder="Cover URL" type="text"></b-form-input>
+              <b-form-input v-model="record.cover" placeholder="Cover URL" type="url"></b-form-input>
             </b-col>
             <b-col md="12" class="last">
-              <b-button type="submit">Add Record</b-button>
+              <b-button type="submit" class="button">Add Record</b-button>
             </b-col>
           </b-row>
         </form>

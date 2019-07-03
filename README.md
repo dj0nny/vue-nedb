@@ -1,5 +1,6 @@
 # vue-nedb
 
+[![Build Status](https://travis-ci.org/dj0nny/vue-nedb.svg?branch=develop)](https://travis-ci.org/dj0nny/vue-nedb)
 [![npm version](https://badge.fury.io/js/vue.svg)](https://badge.fury.io/js/vue)
 [![npm version](https://badge.fury.io/js/nedb.svg)](https://badge.fury.io/js/nedb)
 [![vue](https://img.shields.io/badge/build%20with-vue-blue.svg)](https://img.shields.io/badge/build%20with-vue-blue.svg)

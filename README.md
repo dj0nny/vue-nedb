@@ -1,7 +1,7 @@
 # vue-nedb
 
-
 [![npm version](https://badge.fury.io/js/vue.svg)](https://badge.fury.io/js/vue)
+[![npm version](https://badge.fury.io/js/nedb.svg)](https://badge.fury.io/js/nedb)
 [![vue](https://img.shields.io/badge/build%20with-vue-blue.svg)](https://img.shields.io/badge/build%20with-vue-blue.svg)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
@@ -17,10 +17,10 @@ For this project you need [__Node__](https://nodejs.org/en/) installed on your m
 
 You can clone this repository using __Git__:
 ```bash
-git clone https://github.com/dj0nny/pokencyclopedia.git
+git clone https://github.com/dj0nny/vue-nedb
 ```
 
-Or download the repository [here](https://github.com/dj0nny/pokencyclopedia/archive/develop.zip)
+Or download the repository [here](https://github.com/dj0nny/vue-nedb/archive/develop.zip)
 
 ---
 
@@ -47,6 +47,10 @@ npm run build
 # OR
 yarn build 
 ```
+
+## Next Version
+
+
 
 ## Built with ❤️ using:
 

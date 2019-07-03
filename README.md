@@ -50,6 +50,16 @@ yarn build
 
 ## Next Version
 
+- [x] Initial setup
+- [x] Install NeDB
+- [x] Vuex setup
+- [x] Add pages and routes
+- [x] Add components
+- [x] Styling
+- [x] Add new record form
+- [x] Display records
+- [] Edit record
+- [] Sorting
 
 
 ## Built with ❤️ using:

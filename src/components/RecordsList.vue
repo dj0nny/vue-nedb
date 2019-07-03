@@ -1,10 +1,17 @@
 <template>
   <div class="records-list">
-    <b-row>
+    <b-row v-if="list.length == 0">
+      <b-col md="12">
+        <div class="message">
+          There is no record
+        </div>
+      </b-col>
+    </b-row>
+    <b-row v-else>
       <b-col md="4" v-for="(record, index) in list" :key="index">
         <div class="record-preview">
           <div class="cover">
-            test
+            <img :src="record.cover" :alt="record.name">
           </div>
           <div class="preview-body">
             <h2 class="record-title">{{record.name}}</h2>
@@ -25,7 +32,7 @@
 export default {
   name: 'RecordsList',
   props: [
-    'list'
+    'list',
   ]
 }
 </script>
@@ -37,11 +44,24 @@ export default {
     border: 1px solid #3a506b;
     min-height: 190px;
     padding: 10px;
+
+    .cover {
+      img {
+        width: 100%;
+      }
+    }
     
     .edit {
       margin-top: 30px;
       margin-bottom: 15px;
     }
+
+    .message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: #3a506b;
+  }
 }
 
 </style>

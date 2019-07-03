@@ -66,6 +66,7 @@ export default {
     addRecord() {
       console.log(this.record)
       this.add(this.record)
+      alert('Record added')
     }
   }
 }

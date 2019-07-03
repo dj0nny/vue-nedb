@@ -58,8 +58,8 @@ yarn build
 - [x] Styling
 - [x] Add new record form
 - [x] Display records
-- [] Edit record
-- [] Sorting
+- [ ] Edit record
+- [ ] Sorting
 
 
 ## Built with ❤️ using:

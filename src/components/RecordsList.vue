@@ -19,7 +19,10 @@
             <h6 class="record-genre">{{record.genre}}</h6>
           </div>
           <div class="edit">
-            <b-button class="button">Edit Record</b-button>
+            {{record._id  }}
+            <b-button class="button">
+              <router-link :to="{ name: 'record-detail', params: { id: record._id }}">Edit Record</router-link>
+            </b-button>
           </div>
         </div>
       </b-col>
@@ -55,13 +58,13 @@ export default {
       margin-top: 30px;
       margin-bottom: 15px;
     }
+}
 
-    .message {
-    text-align: center;
-    font-weight: bold;
-    font-size: 35px;
-    color: #3a506b;
-  }
+.message {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  color: #3a506b;
 }
 
 </style>

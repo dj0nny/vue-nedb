@@ -15,6 +15,11 @@ export default new Router({
       path: '/add',
       name: 'add',
       component: () => import('./views/Add.vue')
+    },
+    {
+      path: '/record/:id',
+      name: 'record-detail',
+      component: () => import('./views/RecordDetail.vue')
     }
   ]
 })

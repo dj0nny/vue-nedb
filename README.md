@@ -27,7 +27,7 @@ Or download the repository [here](https://github.com/dj0nny/vue-nedb/archive/dev
 
 Open a terminal and type, inside the directory:
 ```bash
-npm run install 
+npm install 
 # OR
 yarn install
 ```

@@ -19,19 +19,19 @@
 <script>
 export default {
   name: 'Header',
-  data:() => ({
+  data: () => ({
     links: [
       {
-      name: 'Records List',
-      href: '/'
+        name: 'Records List',
+        href: '/',
       },
       {
-      name: 'Add record',
-      href: '/add'
-      }
-    ]
-  })
-}
+        name: 'Add record',
+        href: '/add',
+      },
+    ],
+  }),
+};
 </script>
 
 <style lang="scss" scoped>
@@ -77,4 +77,3 @@ export default {
   }
 }
 </style>
-

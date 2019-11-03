@@ -19,7 +19,6 @@
             <h6 class="record-genre">{{record.genre}}</h6>
           </div>
           <div class="edit">
-            {{record._id  }}
             <b-button class="button">
               <router-link :to="{ name: 'record-detail', params: { id: record._id }}">Edit Record</router-link>
             </b-button>
@@ -36,8 +35,8 @@ export default {
   name: 'RecordsList',
   props: [
     'list',
-  ]
-}
+  ],
+};
 </script>
 
 <style lang="scss" scoped>
@@ -53,7 +52,7 @@ export default {
         width: 100%;
       }
     }
-    
+
     .edit {
       margin-top: 30px;
       margin-bottom: 15px;
@@ -68,4 +67,3 @@ export default {
 }
 
 </style>
-

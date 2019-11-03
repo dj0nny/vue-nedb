@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import AddRecord from '../components/AddRecord'
+import AddRecord from '../components/AddRecord.vue';
 
 export default {
   name: 'Add',
   components: {
-    AddRecord
-  }
-}
+    AddRecord,
+  },
+};
 </script>
 
 <style>

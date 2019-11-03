@@ -13,10 +13,10 @@
 <script>
 export default {
   name: 'Footer',
-  data:() => ({
-    year: new Date().getFullYear()
-  })
-}
+  data: () => ({
+    year: new Date().getFullYear(),
+  }),
+};
 </script>
 
 <style lang="scss" scoped>
@@ -36,4 +36,3 @@ export default {
   }
 }
 </style>
-

@@ -30,17 +30,17 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions } from 'vuex';
 
 export default {
   name: 'AddRecord',
-  data:() => ({
+  data: () => ({
     record: {
       name: '',
       band: '',
       genre: null,
       year: 0,
-      cover: ''
+      cover: '',
     },
     options: [
       { value: null, text: 'Genre' },
@@ -56,20 +56,20 @@ export default {
       { value: 'Death Metal', text: 'Death Metal' },
       { value: 'Progressive Death Metal', text: 'Progressive Death Metal' },
       { value: 'Black Metal', text: 'Black Metal' },
-      { value: 'Ambient', text: 'Ambient' }
-    ]
+      { value: 'Ambient', text: 'Ambient' },
+    ],
   }),
   methods: {
     ...mapActions([
-      'add'
+      'add',
     ]),
     addRecord() {
-      console.log(this.record)
-      this.add(this.record)
-      alert('Record added')
-    }
-  }
-}
+      console.log(this.record);
+      this.add(this.record);
+      alert('Record added');
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -77,10 +77,9 @@ export default {
   .col-md-6, .col-md-12 {
     margin-bottom: 40px !important;
   }
-  
+
   .last {
     margin-bottom: 0px !important;
   }
 }
 </style>
-

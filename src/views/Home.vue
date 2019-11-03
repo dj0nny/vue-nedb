@@ -5,27 +5,27 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex';
 
-import RecordsList from '../components/RecordsList'
+import RecordsList from '../components/RecordsList.vue';
 
 export default {
   name: 'Home',
   components: {
-    RecordsList
+    RecordsList,
   },
   computed: {
     ...mapState([
-      'records'
-    ])
+      'records',
+    ]),
   },
   methods: {
     ...mapActions([
-      'fecthRecords'
-    ])
+      'fetchRecords',
+    ]),
   },
   mounted() {
-    this.fecthRecords()
-  }
-}
+    this.fetchRecords();
+  },
+};
 </script>

@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: 'RecordDetail'
-}
+  name: 'RecordDetail',
+};
 </script>
 
 <style>

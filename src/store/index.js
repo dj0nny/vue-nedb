@@ -17,7 +17,7 @@ export default new Vuex.Store({
     currentRecord: [],
   },
   mutations: {
-    [types.ADD_RECORDS](state, payload) {
+    [types.ADD_RECORD](state, payload) {
       state.records.push(payload);
     },
     [types.SET_RECORDS](state, payload) {
@@ -30,7 +30,7 @@ export default new Vuex.Store({
   actions: {
     [types.ADD]({ commit }, record) {
       db.insert(record, (err, record) => {
-        commit(types.ADD_RECORDS, record);
+        commit(types.ADD_RECORD, record);
       });
     },
     [types.FETCH_RECORDS]({ commit }) {
@@ -41,6 +41,11 @@ export default new Vuex.Store({
     [types.FETCH_RECORD]({ commit }, recordId) {
       db.findOne({ _id: recordId }, (err, item) => {
         commit(types.SET_RECORD, item);
+      });
+    },
+    [types.DELETE_RECORD]({ commit }, recordId) {
+      db.remove({ _id: recordId }, {}, () => {
+        commit(types.SET_RECORDS, this.state.records.filter(value => value._id !== recordId));
       });
     },
   },

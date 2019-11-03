@@ -25,7 +25,7 @@ export default {
       types.FETCH_RECORDS,
     ]),
   },
-  mounted() {
+  created() {
     this.FETCH_RECORDS();
   },
 };

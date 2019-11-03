@@ -15,13 +15,12 @@
           </div>
           <div class="preview-body">
             <h2 class="record-title">{{record.name}}</h2>
-            <h4 class="record-band">{{record.name}}</h4>
+            <h4 class="record-band">{{record.band}}</h4>
             <h6 class="record-genre">{{record.genre}}</h6>
           </div>
           <div class="edit">
-            <b-button class="button">
-              <router-link :to="{ name: 'record-detail', params: { id: record._id }}">Edit Record</router-link>
-            </b-button>
+            <router-link :to="{ name: 'record-detail', params: { id: record._id }}">Edit Record</router-link>
+            <span class="delete" @click="deleteRecord(record._id)">Delete Record</span>
           </div>
         </div>
       </b-col>
@@ -30,12 +29,22 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+import types from '../store/types';
 
 export default {
   name: 'RecordsList',
   props: [
     'list',
   ],
+  methods: {
+    ...mapActions([
+      types.DELETE_RECORD,
+    ]),
+    deleteRecord(id) {
+      this.DELETE_RECORD(id);
+    },
+  },
 };
 </script>
 
@@ -56,6 +65,36 @@ export default {
     .edit {
       margin-top: 30px;
       margin-bottom: 15px;
+
+      a {
+        color: #fff;
+        background: #1c2541;
+        padding: 10px;
+        border: 1px solid #1c2541;
+        transition: .3s all;
+
+        &:hover {
+          background: transparent;
+          color: #1c2541;
+          text-decoration: none;
+        }
+      }
+
+      span.delete {
+        display: inline-block;
+        margin-left: 10px;
+        color: #fff;
+        background: red;
+        padding: 10px;
+        border: 1px solid red;
+        transition: .3s all;
+        cursor: pointer;
+
+        &:hover {
+          color: red;
+          background: transparent !important;
+        }
+      }
     }
 }
 

@@ -22,11 +22,11 @@ export default {
   },
   methods: {
     ...mapActions([
-      types.FETCH_RECORD,
+      types.FETCH_RECORDS,
     ]),
   },
   mounted() {
-    this.FETCH_RECORD();
+    this.FETCH_RECORDS();
   },
 };
 </script>

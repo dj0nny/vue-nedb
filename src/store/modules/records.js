@@ -12,10 +12,10 @@ export default {
   getters: {},
 
   mutations: {
-    [types.ADD_RECORD](state, payload) {
+    [types.ADD_RECORDS](state, payload) {
       state.records.push(payload);
     },
-    [types.SET_RECORD](state, payload) {
+    [types.SET_RECORDS](state, payload) {
       state.records = payload;
     },
   },
@@ -23,12 +23,12 @@ export default {
   actions: {
     [types.ADD]({ commit }, record) {
       db.insert(record, (err, record) => {
-        commit(types.ADD_RECORD, record);
+        commit(types.ADD_RECORDS, record);
       });
     },
-    [types.FETCH_RECORD]({ commit }) {
+    [types.FETCH_RECORDS]({ commit }) {
       db.find({}, (err, records) => {
-        commit(types.SET_RECORD, records);
+        commit(types.SET_RECORDS, records);
       });
     },
   },

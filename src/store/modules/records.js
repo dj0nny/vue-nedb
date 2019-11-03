@@ -1,3 +1,5 @@
+import types from '../types';
+
 const Datastore = require('nedb');
 
 const db = new Datastore({ filename: 'records.json', autoload: true });
@@ -10,23 +12,23 @@ export default {
   getters: {},
 
   mutations: {
-    add_record(state, payload) {
+    [types.ADD_RECORD](state, payload) {
       state.records.push(payload);
     },
-    set_records_state(state, payload) {
+    [types.SET_RECORD](state, payload) {
       state.records = payload;
     },
   },
 
   actions: {
-    add({ commit }, record) {
+    [types.ADD]({ commit }, record) {
       db.insert(record, (err, record) => {
-        commit('add_record', record);
+        commit(types.ADD_RECORD, record);
       });
     },
-    fetchRecords({ commit }) {
+    [types.FETCH_RECORD]({ commit }) {
       db.find({}, (err, records) => {
-        commit('set_records_state', records);
+        commit(types.SET_RECORD, records);
       });
     },
   },

@@ -31,6 +31,7 @@
 
 <script>
 import { mapActions } from 'vuex';
+import types from '../store/types';
 
 export default {
   name: 'AddRecord',
@@ -61,12 +62,11 @@ export default {
   }),
   methods: {
     ...mapActions([
-      'add',
+      types.ADD,
     ]),
-    addRecord() {
-      console.log(this.record);
-      this.add(this.record);
-      alert('Record added');
+    async addRecord() {
+      await this.ADD(this.record);
+      // alert('Record added');
     },
   },
 };

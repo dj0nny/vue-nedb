@@ -1,0 +1,6 @@
+export default {
+  ADD_RECORD: 'ADD_RECORD',
+  SET_RECORD: 'SET_RECORD',
+  ADD: 'ADD',
+  FETCH_RECORD: 'FETCH_RECORD',
+};

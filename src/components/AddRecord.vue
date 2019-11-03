@@ -66,7 +66,6 @@ export default {
     ]),
     async addRecord() {
       await this.ADD(this.record);
-      // alert('Record added');
     },
   },
 };

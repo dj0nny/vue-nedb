@@ -1,13 +1,47 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import records from './modules/records';
+// import records from './modules/records';
+
+import types from './types';
+
+const Datastore = require('nedb');
+
+const db = new Datastore({ filename: 'records.json', autoload: true });
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  modules: {
-    records,
+  state: {
+    records: [],
+    currentRecord: [],
   },
-  strict: true,
+  mutations: {
+    [types.ADD_RECORDS](state, payload) {
+      state.records.push(payload);
+    },
+    [types.SET_RECORDS](state, payload) {
+      state.records = payload;
+    },
+    [types.SET_RECORD](state, payload) {
+      state.currentRecord = payload;
+    },
+  },
+  actions: {
+    [types.ADD]({ commit }, record) {
+      db.insert(record, (err, record) => {
+        commit(types.ADD_RECORDS, record);
+      });
+    },
+    [types.FETCH_RECORDS]({ commit }) {
+      db.find({}, (err, records) => {
+        commit(types.SET_RECORDS, records);
+      });
+    },
+    [types.FETCH_RECORD]({ commit }, recordId) {
+      db.findOne({ _id: recordId }, (err, item) => {
+        commit(types.SET_RECORD, item);
+      });
+    },
+  },
 });

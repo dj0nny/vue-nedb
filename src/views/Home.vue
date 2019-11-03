@@ -1,6 +1,6 @@
 <template>
   <div class="record-list-container">
-    <RecordsList :list="records.records"></RecordsList>
+    <RecordsList :list="records"></RecordsList>
   </div>
 </template>
 

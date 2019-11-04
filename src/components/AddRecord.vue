@@ -2,6 +2,7 @@
   <div class="add-record">
     <b-row>
       <b-col md="12">
+        <h2>Add Record</h2> <br>
         <form @submit.prevent="addRecord()">
           <b-row>
             <b-col md="6">

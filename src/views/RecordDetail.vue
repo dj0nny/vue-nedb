@@ -62,9 +62,10 @@ export default {
   methods: {
     ...mapActions([
       types.FETCH_RECORD,
+      types.EDIT_RECORD,
     ]),
     editRecord() {
-      console.log(this.$route.params.id);
+      
     },
   },
   created() {

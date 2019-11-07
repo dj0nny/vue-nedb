@@ -48,8 +48,8 @@ export default new Vuex.Store({
         commit(types.SET_RECORDS, this.state.records.filter(value => value._id !== recordId));
       });
     },
-    [types.EDIT_RECORD]({ commit }, recordId) {
+    [types.EDIT_RECORD](recordId) {
       console.log(recordId);
-    }
+    },
   },
 });

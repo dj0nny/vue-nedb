@@ -50,7 +50,6 @@ export default new Vuex.Store({
     },
     /* eslint-disable no-unused-vars */
     [types.EDIT_RECORD]({ commit }, record) {
-      console.log(record);
       db.update({ _id: record._id }, {
         $set: {
           name: record.name, band: record.band, genre: record.genre, year: record.year, cover: record.cover,

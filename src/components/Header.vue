@@ -3,7 +3,9 @@
     <b-container>
       <b-row>
         <b-col md="4">
-          <h1 class="title"><strong>Vue</strong>NeDB</h1>
+          <router-link to="/" class="logo">
+            <h1 class="title"><strong>Vue</strong>NeDB</h1>
+          </router-link>
         </b-col>
         <b-col md="8">
           <ul id="menu">
@@ -40,6 +42,10 @@ export default {
   color: #fff;
   padding: 15px;
   margin-bottom: 50px;
+
+  .logo {
+    color: #fff;
+  }
 
   ul#menu {
     padding: 0;

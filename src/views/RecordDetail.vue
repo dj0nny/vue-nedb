@@ -66,6 +66,7 @@ export default {
     ]),
     editRecord() {
       this.EDIT_RECORD(this.currentRecord);
+      this.$router.push('/');
     },
   },
   created() {

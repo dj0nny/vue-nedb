@@ -66,7 +66,9 @@ export default {
       types.ADD,
     ]),
     async addRecord() {
-      await this.ADD(this.record);
+      await this.ADD(this.record).then(() => {
+        this.$router.push('/');
+      });
     },
   },
 };

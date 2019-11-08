@@ -65,7 +65,7 @@ export default {
       types.EDIT_RECORD,
     ]),
     editRecord() {
-
+      this.EDIT_RECORD(this.currentRecord);
     },
   },
   created() {

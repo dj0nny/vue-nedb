@@ -48,8 +48,14 @@ export default new Vuex.Store({
         commit(types.SET_RECORDS, this.state.records.filter(value => value._id !== recordId));
       });
     },
-    [types.EDIT_RECORD](recordId) {
-      console.log(recordId);
+    /* eslint-disable no-unused-vars */
+    [types.EDIT_RECORD]({ commit }, record) {
+      console.log(record);
+      db.update({ _id: record._id }, {
+        $set: {
+          name: record.name, band: record.band, genre: record.genre, year: record.year, cover: record.cover,
+        },
+      });
     },
   },
 });

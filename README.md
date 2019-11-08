@@ -6,7 +6,7 @@
 [![vue](https://img.shields.io/badge/build%20with-vue-blue.svg)](https://img.shields.io/badge/build%20with-vue-blue.svg)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
-> Vue.js web app built with NeDB
+> CRUD client for NeDB built with Vue.js
 
 ## Getting Started
 
@@ -59,8 +59,7 @@ yarn build
 - [x] Styling
 - [x] Add new record form
 - [x] Display records
-- [ ] Edit record
-- [ ] Sorting
+- [x] Edit record
 
 
 ## Built with ❤️ using:

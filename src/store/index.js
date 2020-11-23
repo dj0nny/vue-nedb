@@ -45,7 +45,7 @@ export default new Vuex.Store({
     },
     [types.DELETE_RECORD]({ commit }, recordId) {
       db.remove({ _id: recordId }, {}, () => {
-        commit(types.SET_RECORDS, this.state.records.filter(value => value._id !== recordId));
+        commit(types.SET_RECORDS, this.state.records.filter((value) => value._id !== recordId));
       });
     },
     /* eslint-disable no-unused-vars */

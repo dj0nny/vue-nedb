@@ -3,7 +3,7 @@
     <b-row>
       <b-col md="12">
         <h2>Edit Record</h2><br>
-        <form @submit.prevent="editRecord()">
+        <form @submit.prevent="handleEdit">
           <b-row>
             <b-col md="6">
               <b-form-input v-model="currentRecord.name" placeholder="Record name" type="text" required></b-form-input>
@@ -32,57 +32,31 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import types from '../store/types';
+
+import genres from '../genres';
 
 export default {
   name: 'RecordDetail',
   data: () => ({
-    options: [
-      { value: null, text: 'Genre' },
-      { value: 'Rock', text: 'Rock' },
-      { value: 'Pop', text: 'Pop' },
-      { value: 'Jazz', text: 'Jazz' },
-      { value: 'Blues', text: 'Blues' },
-      { value: 'R & B', text: 'R & B' },
-      { value: 'Hard Rock', text: 'Hard Rock' },
-      { value: 'Heavy Metal', text: 'Heavy Metal' },
-      { value: 'Progressive Rock', text: 'Progressive Rock' },
-      { value: 'Progressive Metal', text: 'Progressive Metal' },
-      { value: 'Death Metal', text: 'Death Metal' },
-      { value: 'Progressive Death Metal', text: 'Progressive Death Metal' },
-      { value: 'Black Metal', text: 'Black Metal' },
-      { value: 'Ambient', text: 'Ambient' },
-    ],
+    options: genres,
   }),
   computed: {
-    ...mapState([
+    ...mapState('records', [
       'currentRecord',
     ]),
   },
   methods: {
-    ...mapActions([
-      types.FETCH_RECORD,
-      types.EDIT_RECORD,
+    ...mapActions('records', [
+      'editRecord',
+      'fetchRecord',
     ]),
-    editRecord() {
-      this.EDIT_RECORD(this.currentRecord);
+    handleEdit() {
+      this.editRecord(this.currentRecord);
       this.$router.push('/');
     },
   },
-  created() {
-    this.FETCH_RECORD(this.$route.params.id);
+  mounted() {
+    this.fetchRecord(this.$route.params.id);
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.edit-record {
-  .col-md-6, .col-md-12 {
-    margin-bottom: 40px !important;
-  }
-
-  .last {
-    margin-bottom: 0px !important;
-  }
-}
-</style>

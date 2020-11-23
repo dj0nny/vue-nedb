@@ -6,7 +6,6 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import types from '../store/types';
 
 import RecordsList from '../components/RecordsList.vue';
 
@@ -16,17 +15,17 @@ export default {
     RecordsList,
   },
   computed: {
-    ...mapState([
+    ...mapState('records', [
       'records',
     ]),
   },
   methods: {
-    ...mapActions([
-      types.FETCH_RECORDS,
+    ...mapActions('records', [
+      'fetchAllRecords',
     ]),
   },
-  created() {
-    this.FETCH_RECORDS();
+  mounted() {
+    this.fetchAllRecords();
   },
 };
 </script>

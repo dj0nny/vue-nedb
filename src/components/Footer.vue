@@ -18,21 +18,3 @@ export default {
   }),
 };
 </script>
-
-<style lang="scss" scoped>
-#footer {
-  background: #1c2541;
-  color: #fff;
-  padding: 50px;
-  margin-top: 50px;
-
-  a {
-    color: #fff;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-</style>

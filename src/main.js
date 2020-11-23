@@ -7,8 +7,9 @@ import store from './store';
 /* eslint-disable import/no-extraneous-dependencies */
 import 'bootstrap/dist/css/bootstrap.css';
 /* eslint-enable import/no-extraneous-dependencies */
-
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+import './assets/main.scss';
 
 Vue.use(BootstrapVue);
 

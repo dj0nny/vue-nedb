@@ -37,49 +37,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#header {
-  background: #0b123b;
-  color: #fff;
-  padding: 15px;
-  margin-bottom: 50px;
 
-  .logo {
-    color: #fff;
-  }
-
-  ul#menu {
-    padding: 0;
-    margin: 0;
-    float: right;
-
-    li.menu-item {
-      list-style-type: none;
-      display: inline-block;
-      margin-right: 20px;
-      padding: 15px;
-
-      a {
-        color: #fff;
-      }
-
-      a.router-link-exact-active.router-link-active {
-       text-decoration: underline;
-      }
-    }
-
-    li.external {
-      a {
-        border: 1px solid #fff;
-        padding: 10px 40px 12px 40px;
-        transition: .3s all;
-
-        &:hover {
-          color: #0b123b;
-          background: #fff;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
 </style>

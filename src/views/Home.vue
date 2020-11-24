@@ -1,6 +1,6 @@
 <template>
   <div class="record-list-container">
-    <RecordsList :list="records"></RecordsList>
+    <RecordsList :list="records" v-if="!loading"></RecordsList>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
   computed: {
     ...mapState('records', [
       'records',
+      'loading',
     ]),
   },
   methods: {

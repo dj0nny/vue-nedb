@@ -1,6 +1,9 @@
 <template>
   <div class="record-list-container">
-    <RecordsList :list="records" v-if="!loading"></RecordsList>
+    <div class="spinner-wrapper" v-if="loading">
+      <img src="../assets/spinner.svg" class="spinner">
+    </div>
+    <RecordsList :list="records" v-else></RecordsList>
   </div>
 </template>
 
